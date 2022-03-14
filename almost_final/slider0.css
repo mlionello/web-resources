@@ -1,0 +1,97 @@
+.firstslide{
+ padding: 200px 25% 0 25%;
+position : relative;
+visibility:visible;
+margin-left: 0;
+margin-right: 0;
+opacity : 1;;  
+}
+
+.slideinR{
+padding: 200px 25% 70px 25%;
+position : relative;
+visibility:visible;
+animation: animinR 0.7s;
+animation-fill-mode: forwards;
+}
+
+.slideout{
+padding-top: 200px;
+margin-left: 100%;
+margin-right:-100%;
+opacity: 0;
+visibility: hidden;
+position : fixed;}
+}
+
+.slideinHome{
+visibility: visible;
+position : relative;
+padding: 200px 25% 70px 25%;
+margin-left: 0;
+margin-right: 0;
+opacity : 0;
+}
+
+@keyframes animinR {
+0%{
+margin-left: 100%;
+margin-right: -100%;}
+100%{
+margin-left: 0;
+margin-right: 0;
+opacity : 1;}
+}
+
+.slideinL{
+padding: 200px 25% 70px 25%;
+position : relative;
+visibility:visible;
+animation: animinL 0.7s;
+animation-fill-mode: forwards;
+}
+
+@keyframes animinL {
+0%{
+margin-left: -100%;
+margin-right: 200%;}
+100%{
+margin-left: 0;
+margin-right: 0;
+opacity : 1;}
+}
+
+.slideoutR{
+padding-top: 200px;
+animation: animoutR 0.5s;
+animation-fill-mode: forwards;}
+
+@keyframes animoutR {
+0%{
+margin-left: 0;
+margin-right: 0;
+opacity : 1;}
+    100%{margin-left: 100%;
+margin-right:-100%;
+        opacity: 0;
+visibility: hidden;
+position : fixed;}
+} 
+
+.slideoutL{
+padding-top: 200px;
+animation: animoutL 0.5s;
+animation-fill-mode: forwards;}
+
+@keyframes animoutL {
+0%{
+margin-left: 0;
+margin-right: 0;
+opacity : 1;}
+    100%{margin-left: -100%;
+margin-right:200%;
+        opacity: 0;
+visibility: hidden;
+position : fixed;}
+} 
+

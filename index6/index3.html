@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="5j0-UcrKcxTQC6iqlw6WamWdOdtHEqzlvxeHXHeHXKk">
+<meta name="description" content="Matteo Lionello, Deep Learning and Machnine Learning developer">
+<meta name="robots" content="index,follow">
+<meta name="googlebot" content="index, follow">
+<title>Matteo Lionello</title>
+
+<meta charset="utf-8">
+</head>
+
+<style>
+@font-face {
+  font-family: navfont1;
+  src: url(/home/f-matteo/Documents/m_fonts/source-code-pro-release/WOFF/TTF/SourceCodePro-Bold.ttf.woff);
+}
+
+@font-face {
+  font-family: navfont2;
+  src: url(/home/f-matteo/Documents/m_fonts/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2);
+}
+
+
+body {
+background-color: rgb(235, 235, 180);
+margin:0;
+padding:0;
+color: rgb(121, 110, 58);
+}
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: rgb(121, 110, 58);
+    text-decoration: none;
+}
+
+.icons{
+display:inline;
+float:right;
+margin-top:10px;
+margin-right:30px;
+transition : 0.8s;
+}
+
+nav{
+position:fixed;
+top:0px;
+width:100%;
+padding-top:50px;
+padding-bottom:15px;
+transition:0.6s;
+z-index:5;
+background-color:rgb(235, 235, 180);}
+
+nav ul{
+text-align:center;
+transition:0.6s;
+}
+
+nav ul li{
+display:inline;
+font-family:navfont1;
+padding-left:15px;
+padding-right:15px;
+border-bottom: 1px solid rgb(121, 110, 58);
+}
+
+nav ul li:hover{
+border-bottom: 2px solid rgb(121, 110, 58);
+}
+
+#topmenu{
+padding:0;
+margin:0;
+z-index:10;
+position:fixed;
+top:0;
+right:0;
+}
+
+main{
+width:100%;
+}
+
+.content{
+position:fixed;
+top:100px;
+bottom:0px;
+height:0px;
+transition:0.6s;
+visibility:hidden;
+height: 300px;
+padding: 200px 15%;
+padding-top: 150px;
+}
+
+#home{
+padding:0;
+text-align:center;
+height: 300px;
+padding-top: 150px;
+height:auto;
+bottom:auto;
+visibility:visible;
+}
+
+</style>
+
+
+<body>
+<script>
+function turnpage( link_id) {
+firstpage = slideout();
+slidein(link_id);
+}
+
+function slideout() {
+var li_items = document.getElementsByClassName('content');
+for (var i=0; i < li_items.length; i++) {
+    if (li_items[i].style.visibility != "hidden") {
+        li_items[i].style.visibility = "hidden";
+        li_items[i].style.bottom = "0";
+        li_items[i].style.marginLeft = "-100%";
+        li_items[i].style.marginRight = "200%";
+        li_items[i].style.width = "0";
+        li_items[i].style.position = "fixed";
+        li_items[i].style.opacity = "0";
+	break;
+	}
+    }
+   return li_items[i]
+}
+
+function slidein(link_id){
+var x = document.getElementById(link_id);
+x.style.visibility = "visible";
+x.style.width = "inherit";
+x.style.marginLeft = "0";
+x.style.marginRight = "auto";
+x.style.position = "relative";
+x.style.bottom = "auto";
+x.style.opacity = "1";
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navlist").style.textAlign = "left";
+    document.getElementById("navbar").style.paddingTop = "0";
+    document.getElementById("navbar").style.paddingBottom = "5px";
+    var x = document.getElementsByClassName("icons");
+    for (i = 0; i < x.length; i++) {
+         x[i].style.marginTop = "0";
+         x[i].style.marginRight = "10px";
+    } 
+  } else {
+    document.getElementById("navlist").style.textAlign = "center";
+    document.getElementById("navbar").style.paddingTop = "50px";
+    document.getElementById("navbar").style.paddingBottom = "15px";
+    var x = document.getElementsByClassName("icons");
+    for (i = 0; i < x.length; i++) {
+         x[i].style.marginTop = "10px";
+         x[i].style.marginRight = "30px";
+    } 
+  }
+} 
+</script>
+<header >
+<span id="topmenu"><ul>
+<li class="icons"><a href="http://researchgate.com/mattteolionello"><img src="rg.png"></a></li>
+<li class="icons"><a href="http://linkedin.com/mattteolionello"><img src="link.png"></a></li>
+</ul></span>
+
+<nav id="navbar">
+<ul id="navlist">
+<li><a class="mainnav" href="#" onclick="turnpage('home');return false;">HOME</a></li>
+<li><a class="mainnav" href="#" onclick="turnpage('cv');return false;">CV</a></li>
+<li class="mainnav" href="#" onclick="turnpage('projects');return false;">PROJECTS</li>
+<li class="mainnav" href="#" onclick="turnpage('publications');return false;">PUBLICATIONS</li>
+<li class="mainnav" href="#" onclick="turnpage('sum');return false;">ABOUT ME</li>
+<li class="mainnav" href="#" onclick="tunrpage('contacts');return false;">CONTACTS</li>
+<li><a class="mainnav" href="#" onclick="turnpage('news');return false;">NEWS</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section id="home" class="content" style="text-align:center; height: 300px; padding-top: 150px;">
+<h1 style="font-size: 48px; color: black"> Matteo Lionello </h1>
+<p style="font-family:roboto; color:black">Research and Development in Machine Learning & Deep Learning Technologies for Audio and Sound 
+</section>
+
+<section id="cv" class="content" style=" padding: 200px 15%">
+<div style="font-family:navfont1; float:right; border:2px; font-size:large"><a href="cv.pdf"><img src="download.png"></a></div>
+<div class="cvrsection"><h1>Education and Job Experience</h1><hr>
+<div style="padding-top:20px"><b> Machine Learning research consultancy for audio , UK</b> <span style="float:right">
+<i>2021 - present</i></span></div>
+
+<div style="padding-top:20px"><b> The Bartlett Institute, University Collage London (UCL), London </b> <span style="float:right">
+<i>October 2018 - February 2021</i></span></div>
+MPhil Student at the Bartlett Institute<br>
+<div style="padding-left:20px; padding-right:15%">Thesis title: <i>A new methodology for modelling urban soundscapes: a psychometric revisitation of the current standard and a Bayesian approach for individual response prediction</i></div></div>
+
+<div style="padding-top:20px"><b>  Universitat Pompeu Fabra, Barcelona </b> <span style="float:right">
+<i> September - December 2017</i></span></div>
+Intern position at Music Technology Group, MTG - TELMI ERC project<br>
+<div style="padding-left:20px; padding-right:15%">Project title: <i>A Machine Learning Approach to Violin Vibrato Modelling in Audio Performances and a Didactic Application for Mobile Devices</i></div>
+
+<div style="padding-top:20px"><b>  Aalborg University, Copenhagen </b> <span style="float:right">
+<i>   October 2016 - June 2018</i></span></div>
+MSc in Sound and Music Computing, SMC<br>
+<div style="padding-left:20px; padding-right:15%">Thesis title: </i>Deep Learning for Sounds Representation and Generation</i></div>
+
+<div style="padding-top:20px"><b> University of Padova, Padova</b> <span style="float:right">
+<i>September 2011 - November 2015</i></span></div>
+BSc in Information Engineering <br>
+<div style="padding-left:20px; padding-right:15%">Thesis title: <i>Interactive Soundscapes: Design of a physical space augmented by dynamic sound rendering.</i></div>
+</div>
+
+
+<div class="cvrsection"><h1>Machine Learning: a selection of projects</h1><hr>
+<ul><li style="padding-top:10px"> Bayesian-NN for individual soundscape assessment predictions<br>
+<li style="padding-top:10px"> Parametric t-SNE (ANN) for music recommendation system and browser GUI for online music streaming providers - in collaboration with MoodAgent Company (Copenhagen)<br>
+<li style="padding-top:10px"> Variational Autoencoder for sound morphing<br>
+<li style="padding-top:10px"> Violin vibrato expressive performance modelling and GUI on android rendering with real time pitch detection<br>
+<li style="padding-top:10px"> LSTM modelling for melody structure extraction and generation<br>
+</div>
+
+<div class="cvrsection"><h1>Conferences and Workshops</h1><hr>
+<ul name="cv-conf-list" style="list-style-type: none;"><li>Digital Music Research Network One-day Workshop 2020 (DMRN+15) <span style="float:right"> <i>December 15, 2020 London</i></span></li>
+<li style="padding-top:10px">International Conference on Acoustics, Speech, and Signal Processing (ICASSP) <span style="float:right"> <i> May 4 to 8, 2020 Barcelona</i></span></li>
+<li style="padding-top:10px">International Congress on Acoustics (ICA2019) <span style="float:right"> <i> September 9 to 13, 2019 Aachen</i></span></li>
+<li style="padding-top:10px">Machine Learning for Acoustics Summer School (UKANSS19) <span style="float:right"> <i> August 5 to 9, 2019 Gregynog Hall, Tregynon</i></span></li>
+<li style="padding-top:10px">Soundscape Workshop (IOA) <span style="float:right"> <i> June 25, 2019 London</i></span></li>
+<li style="padding-top:10px">Sound and Music Computing Conference (SMC Conference) <span style="float:right"> <i> July 4 to 7, 2018 Limassol</i></span></li>
+<li style="padding-top:10px">International Workshop on Machine Learning and Music (MML) <span style="float:right"> <i> October 6, 2017 Barcelona</i></span></li>
+<li style="padding-top:10px">New Interfaces for Musical Expression (NIME) <span style="float:right"> <i> May 15 to 19, 2017 Copenhagen</i></span></li>
+<li style="padding-top:10px">Sound and Music Computing Summer School <span style="float:right"> <i> August 26 to 30, 2016 Hamburg</i></span></li>
+</ul></div>
+
+<div class="cvrsection"><h1>Prizes and Awards</h1><hr>
+<ul>
+<li style="padding-top:10px">UKAN Acoustics Network Summer School Grant</li>
+<li style="padding-top:10px">pounds 500,00 Young Scientist Conference Attendance Award</li>
+<li style="padding-top:10px">Winner of pounds 21,837 studentship (full time) in urban sound environment, EU ERC.</li>
+<li style="padding-top:10px">Awarded grant of DKK 6.963,00 by OTTO MØNSTEDS FOND.</li>
+</div>
+
+<div class="cvrsection"><h1>Technical Knowledge</h1><hr>
+<table>
+<tr><td>Programming Languages: </td><td> Java, Python, Matlab, Unix,  basic knowledge of C++ and PhP</td></tr>
+<tr><td>Libraries: </td><td> Keras, Tensorflow, Pytorch, Pytorch Lightning</td></tr>
+<tr><td>Protocols: </td><td> OpenSoundsControl (OSC) and TCP/IP</td></tr>
+<tr><td>Databases: </td><td> basic knowledge of SQL and MySQL </td></tr>
+<tr><td>Tools: </td><td> PureData, Android, HTML, CSS and basic knowledge of PhP</td></tr>
+</table>
+</div>
+
+<div class="cvrsection"><h1>Language Skills</h1><hr>
+<i>Italian:</i> Native language; 
+<i>English:</i> C1 (7.5 IELTS, October 2018); <i>Spanish:</i>  B\'asico
+</div>
+
+</section>
+<section id="projects" class="content">
+<h1>Audio Enanchment and denoising for real time porpuses</h1>
+<h1>Urban Soundscape index modelling</h1>
+address: UCL
+description:
+link:
+<h1>Music recommendation system</h1>
+address: AAU in collaboration with MoodAgent Company
+<h1>Music expressive performance mdoelling</h1>
+address: AAU in collaboration with MTG
+<h1>Deep learning for sound morphing</h1>
+address: AAU
+<h1>An Interactive Soundscape augmented space</h1>
+Address: University of Padua
+
+</section>
+<section id="publications" class="content">
+2021:<br><br>
+
+<u>M. Lionello</u>, F. Aletta, J. Kang, (2021) "<i>Introducing a Method for Intervals Correction on Multiple Likert Scales: A Case Study on an Urban Soundscape Data Collection Instrument</i>" Frontiers in Psychology<br><br>
+
+2020:<br><br>
+
+<u>M. Lionello</u>, F. Aletta, J. Kang, (2020) "<i>A systematic review of prediction models for the experience of urban soundscapes</i>" in Applied Acoustics<br><br>
+
+A. Mitchell,  T.  Oberman, F.  Aletta,  M.  Erfanian,  M. Kachlicka,  <u>M.  Lionello</u>,  J.  Kang,  (2020) "<i>The  Soundscape  Indices  (SSID)  Protocol:  A  Method  for  Urban  Soundscape  Surveys—Questionnaires   with   Acoustical   and   Contextual   Information</i>" in Applied Sciences <br><br>
+
+<u>M. Lionello</u>, F. Aletta, J. Kang. (2019) "<i>On the dimension and scaling analysis of soundscape assessment tools: a case study about the “Method A” of ISO/TS 12913-2:2018<i>" Invited paper of 23rd international congress on acoustics.<br><br>
+
+2019:<br><br>
+
+F. Aletta, T. Oberman, J. Kang, M. Erfanian, M. Kachlicka, <u>M. Lionello</u>, A. Mitchell, (2019) "<i>Associations between soundscape experience and self-reported wellbeing in open public urban spaces: a field study</i>", The LANCET,<br><br>
+
+<u>M. Lionello</u>, H. Purwins (2019) "\emph{End-To-End Dilated Variational Autoencoder with Bottleneck Discriminative Loss for Sound Morphing - A Preliminary Study}" DOI: 10.13140/RG.2.2.21572.58240/1.<br><br>
+
+2018:<br><br>
+
+<u>M. Lionello</u>, L. Pietrogrande, H. Purwins, M. Abou-Zleikha (2018)
+"\emph{Exploration of Musical Space with Parametric t-SNE in a Browser Interface}"
+Proceedings to the 15th Sound and Music Computing Conference, Limassol, Cyprus.<br><br>
+
+<u>M. Lionello</u>, R. Ramirez, (2018)
+"<i>A Machine Learning Approach to Violin Vibrato Modelling in Audio Performances and a Didactic Application for Mobile Devices</i>"
+Proceedings to the 15th Sound and Music Computing Conference, Limassol, Cyprus.<br><br>
+
+<u>M. Lionello</u>, H. Purwins "<i>Deep Learning for Sounds Representation and Generation</i>" Master thesis, 2018. Aalbrog University, Copenhagen \url{https://projekter.aau.dk/projekter/files/281073844/thesis\_matteolionello.pdf}.<br><br>
+
+2017:<br><br>
+
+<u>M. Lionello</u>, M. Mandanici, S. Canazza, E. Micheloni, (2017)
+<i>Interactive Soundscapes: Developing a Physical Space Augmented through Dynamic Sound Rendering and Granular Synthesis</i>"
+Proceedings of the 14th Sound and Music Computing Conference, Espoo, Finland.<br><br>
+
+Complete list of publications available on my personal Research Gate page: \href{researchgate.net/profile/Matteo_Lionello}{researchgate.net/profile/Matteo\_Lionello}
+
+
+</section>
+<section id="sum" class="content">
+</section>
+
+<section id="contacts" class="content">
+</section>
+
+<section id="news" class="content">
+<div style=" padding: 200px 35%">
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6839094567208407040" allowfullscreen="" title="Embedded post" width="504" height="330" frameborder="0"></iframe>
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6717780045919739904" allowfullscreen="" title="Embedded post" width="504" height="330" frameborder="0"></iframe>
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6804076873216217088" allowfullscreen="" title="Embedded post" width="504" height="390" frameborder="0"></iframe>
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6780839327950753792" allowfullscreen="" title="Embedded post" width="504" height="364" frameborder="0"></iframe>
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6759445895189671936" allowfullscreen="" title="Embedded post" width="504" height="510" frameborder="0"></iframe>
+<iframe style="padding-top:30px" src="https://www.linkedin.com/embed/feed/update/urn:li:share:6745304107919130625" allowfullscreen="" title="Embedded post" width="504" height="366" frameborder="0"></iframe>
+</div>
+</section>
+</main>
+
+<footer style="position:fixed; bottom:0; left:0; right:0; height:30px; color:rgb(235, 235, 180); background-color:rgb(31, 23, 12)">
+<span style="font-size:small; float: left; padding:5px; ">Matteo Lionello contact: lione***.mat***[at]gmail.com</span>
+
+
+</footer>
+
+</body>
+</html>

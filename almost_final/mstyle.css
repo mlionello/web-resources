@@ -1,0 +1,122 @@
+@font-face {
+  font-family: navfont1;
+  src: url(/home/f-matteo/Documents/m_fonts/source-code-pro-release/WOFF/TTF/SourceCodePro-Bold.ttf.woff);
+}
+
+@font-face {
+  font-family: navfont2;
+  src: url(/home/f-matteo/Documents/m_fonts/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2);
+}
+
+
+body {
+background-color: rgb(235, 235, 180);
+margin:0;
+padding:0;
+color: rgb(31, 23, 12);
+}
+
+a:link, a:visited,  a:hover, a:active{
+    color: rgb(121, 110, 58);
+    text-decoration: none;
+}
+
+.icons{
+display:inline;
+float:right;
+margin-top:10px;
+margin-right:30px;
+transition : 0.8s;
+}
+
+.icons img{
+    width:50px;
+}
+
+nav{
+color: rgb(121, 110, 58);
+position:fixed;
+top:0px;
+width:100%;
+padding-top:50px;
+padding-bottom:15px;
+transition:0.6s;
+z-index:5;
+background-color:rgb(235, 235, 180);}
+
+nav ul{
+text-align:center;
+transition:0.6s;
+    padding:0;
+}
+
+nav ul li{
+display:inline;
+font-family:navfont1;
+padding-left:15px;
+padding-right:15px;
+border-bottom: 1px solid rgb(121, 110, 58);
+}
+
+nav ul li:hover{
+border-bottom: 2px solid rgb(121, 110, 58);
+}
+
+
+nav ul li.navopen{
+border-bottom: 2px solid rgb(121, 110, 58);
+opacity:0.7;
+
+}
+
+#topmenu{
+padding:0;
+margin:0;
+z-index:10;
+position:fixed;
+top:0;
+right:0;
+}
+
+main{
+font-size: 12px;
+width:100%;
+}
+
+.btn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+#contacts
+{text-align: center;}
+
+#contacts span a img{
+    width:60px;
+    padding:40px;
+}
+
+#contacts span a :hover{
+border-bottom: 2px solid rgb(121, 110, 58);
+}
+
+
+.content{
+visibility: hidden;
+position:fixed;
+margin-left: 100%;
+}
+
+#home{
+    font-size: 16px;
+}
+
+
