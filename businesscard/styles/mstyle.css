@@ -147,6 +147,8 @@ margin-right:-60px;}
 
 
 @media (max-width: 1050px){
+main{
+font-size:medium;}
 
     header {
         visibility:hidden;
