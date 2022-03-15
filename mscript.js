@@ -6,7 +6,7 @@ let touchendX = 0
 
 const slider = document.getElementById('mmain')
 
-slider.addEventListener('touchstart', e => {
+/*slider.addEventListener('touchstart', e => {
     console.error('touched')
   touchstartX = e.changedTouches[0].screenX
 })
@@ -20,7 +20,7 @@ slider.addEventListener('touchend', e => {
     if (touchendX-touchstartX<-10) {
     turnpage(idList[Math.max(idList.lastIndexOf(current_id)-1,0)]);}
 })
-
+*/
 
 function showmmenu() {
   var x = document.getElementById("myLinks");

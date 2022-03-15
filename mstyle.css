@@ -1,11 +1,11 @@
 @font-face {
   font-family: navfont1;
-  src: url(/home/f-matteo/Documents/m_fonts/source-code-pro-release/WOFF/TTF/SourceCodePro-Bold.ttf.woff);
+  src: url("SourceCodePro-Bold.ttf.woff");
 }
 
 @font-face {
   font-family: navfont2;
-  src: url(/home/f-matteo/Documents/m_fonts/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2);
+  src: url("JetBrainsMono-Bold.woff2");
 }
 
 
