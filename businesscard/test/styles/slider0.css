@@ -65,6 +65,7 @@ animation-fill-mode: forwards;}
 .slideoutL{
 position : fixed;
 margin-top:0;
+top:0;
 animation: animoutL 0.7s;
 animation-fill-mode: forwards;}
 
