@@ -1,0 +1,72 @@
+
+
+#undercons{
+    position: fixed;
+    top:0px; 
+    margin:0; 
+    z-index: 100;
+}
+
+
+
+.btn {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+#contacts
+{text-align: center;}
+
+#contacts span a img{
+    width:60px;
+    padding:40px;
+}
+
+#contacts span a :hover{
+border-bottom: 2px solid rgb(121, 110, 58);
+}
+
+
+#projects h3{
+    display: list-item;
+    margin-left: 20px;
+}
+
+#projects p{
+    padding-left: 20px;
+}
+
+#downloadidwrapperdiv{
+margin-right:-60px;}
+
+
+@media (max-width: 1050px){
+
+    #undercons{
+        position: fixed;
+        top: auto;
+        margin: 0;
+        z-index: 100;
+        bottom: 0px;
+        right: -50px;
+        bottom: -50px;
+}
+
+
+#cv div span{
+display:none;}
+#cv ul li span{
+display:none;}   
+}
+
+#downloadidwrapperdiv{
+display:none;}
+}

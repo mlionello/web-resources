@@ -1,0 +1,42 @@
+@font-face {
+  font-family: navfont1;
+  src: url("/fonts/SourceCodePro-Bold.ttf.woff");
+}
+
+@font-face {
+  font-family: navfont2;
+  src: url("/fonts/JetBrainsMono-Bold.woff2");
+}
+
+
+body {
+background-color: rgb(235, 235, 180);
+margin:0;
+padding:0;
+color: rgb(31, 23, 12);
+}
+
+a:link, a:visited,  a:hover, a:active{
+    color: rgb(121, 110, 58);
+    text-decoration: none;
+}
+
+body{
+font-size: 16px;
+width:100%;
+}
+
+
+@media (max-width: 1050px){
+body{
+font-size:24px}
+
+    header {
+        visibility:hidden;
+    }    
+    
+
+footer div{
+	height:60px;
+}
+

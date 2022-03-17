@@ -21,6 +21,29 @@ a:link, a:visited,  a:hover, a:active{
     text-decoration: none;
 }
 
+main{
+font-size: 16px;
+width:100%;
+}
+
+
+section{
+padding-top: 200px;
+padding-left: 20%;
+padding-bottom: 70px;
+padding-right: 20%;
+}
+
+h1{
+	padding-top:40px;
+}
+
+#spanfooter{
+	font-size:small;
+	 float: left;
+	  padding:5px;
+}
+
 .icons{
 display:inline;
 float:right;
@@ -84,19 +107,6 @@ top:0;
 right:0;
 }
 
-main{
-font-size: 12px;
-width:100%;
-}
-
-
-
-section{
-padding-top: 200px;
-padding-left: 20%;
-padding-bottom: 70px;
-padding-right: 20%;
-}
 
 .btn {
   background-color: #008CBA;
@@ -123,6 +133,14 @@ padding-right: 20%;
 border-bottom: 2px solid rgb(121, 110, 58);
 }
 
+footer div{
+	height:30px;
+}
+#spanfooter{
+	font-size:20px;
+	 float: left;
+	  padding:10px;
+}
 
 .content{
 visibility: hidden;
@@ -130,9 +148,7 @@ position:fixed;
 margin-left: 100%;
 }
 
-#home{
-    font-size: 16px;
-}
+
 #projects h3{
     display: list-item;
     margin-left: 20px;
@@ -148,7 +164,7 @@ margin-right:-60px;}
 
 @media (max-width: 1050px){
 main{
-font-size:medium;}
+font-size:24px}
 
     header {
         visibility:hidden;
@@ -175,21 +191,27 @@ width: auto;
 .topnav {
   overflow: hidden;
   background-color: #333;
-  position: relative;
+  position: fixed;
+  width:100%;
+  z-index:12;
+    font-size:24px;
 }
 
 /* Hide the links inside the navigation menu (except for logo/home) */
 .topnav #myLinks {
   display: none;
+    font-size:24px;
+  
 }
 
 /* Style navigation menu links */
 .topnav a {
   color: white;
-  padding: 14px 16px;
+  padding: 30px 16px;
   text-decoration: none;
-  font-size: 17px;
   display: block;
+      font-size:24px;
+  
 }
 
 /* Style the hamburger menu */
@@ -219,6 +241,10 @@ display:none;}
 display:none;}   
 }
 
+footer div{
+	height:60px;
+}
+
 #downloadidwrapperdiv{
-margin-right:0px;}
+display:none;}
 }
