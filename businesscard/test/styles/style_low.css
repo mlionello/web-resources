@@ -1,4 +1,6 @@
-
+#home{
+    padding-top:50vh;
+}
 
 #undercons{
     position: fixed;
@@ -49,7 +51,6 @@ margin-right:-60px;}
 
 
 @media (max-width: 1050px){
-	    #home{padding-top:200px;}
 	
 
     #undercons{
