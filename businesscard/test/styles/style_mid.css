@@ -24,8 +24,13 @@ h1{
 
 
 footer div{
-	height:30px;
-}
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:30px;
+color:rgb(235, 235, 180);
+background-color:rgb(31, 23, 12);}
 
 .content{
 visibility: hidden;
@@ -52,11 +57,18 @@ width: auto;
 }
      /* Style the navigation menu */
 footer div{
-	height:50px;
-}
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:50px;
+color:rgb(235, 235, 180);
+background-color:rgb(31, 23, 12);}
 
 #spanfooter{
 	 float: left;
 	  padding:10px;
+	  	font-size:16px;
+	  
 }
 }
