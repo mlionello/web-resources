@@ -49,6 +49,8 @@ margin-right:-60px;}
 
 
 @media (max-width: 1050px){
+	    #home{padding-top:200px;}
+	
 
     #undercons{
         position: fixed;
