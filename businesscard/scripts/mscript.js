@@ -1,5 +1,5 @@
 var current_id = "home";
-const idList = ["home", "curriculum",  "projects", "publications", "summary", "contacts", "news"];
+const idList = ["HOME", "CURRICULUM",  "PROJECTS", "PUBLICATIONS", "SUMMARY", "CONTACTS", "NEWS"];
 
 let touchstartX = 0
 let touchendX = 0
@@ -164,7 +164,6 @@ function enableScroll() {
 
   window.addEventListener("scroll", function() {
   var elementTarget = document.getElementsByClassName("content");
-  console.error(elementTarget)
   var current_order = 0;
   for (i = 0; i < elementTarget.length; i++) {
         console.error(window.scrollY , elementTarget[i].offsetTop + elementTarget[i].offsetHeight)
@@ -172,7 +171,5 @@ function enableScroll() {
         if (elementTarget[i].style.order > current_order) {
         current_order = elementTarget[i].style.order-1;
         }}}
-  console.error(current_order)
-  console.error(idList[current_order])
   document.getElementById("menupointer").innerHTML = idList[current_order]
 });
