@@ -7,7 +7,10 @@
 <meta name="googlebot" content="index, follow">
 <title>Matteo Lionello</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/mstyle.css">
+    <link rel="stylesheet" href="styles/style_general.css">
+    <link rel="stylesheet" href="styles/style_navmenu.css">
+    <link rel="stylesheet" href="styles/style_mid.css">
+    <link rel="stylesheet" href="styles/style_low.css">
     <link rel="stylesheet" href="styles/slider0.css">
 
 <meta charset="utf-8">
@@ -16,7 +19,6 @@
 <body>
 <script src="scripts/mscript.js">
 </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Top Navigation Menu -->
 <div class="topnav">
@@ -32,7 +34,7 @@
     <a href="#" onclick="turnpage('contacts'); showmmenu();">Contacts</a>
   </div>
   <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="showmmenu()">
+  <a href="#" class="icon" onclick="showmmenu();">
     <i class="fa fa-bars"></i>
   </a>
 </div>
@@ -61,8 +63,8 @@
 <main id="mmain">
 <section id="home" class="firstslide" style="text-align:center;
 order: 1">
-<h1 style="font-size: 48px; color: black"> Matteo Lionello </h1>
-<p style="font-family:roboto; color:black">Research and Development in Machine Learning & Deep Learning Technologies for Audio and Sound 
+<h1> Matteo Lionello </h1>
+<p>Research and Development in Machine Learning & Deep Learning Technologies for Audio and Sound 
 </section>
 
 <section id="cv" class="content" style=" order: 2">
@@ -277,7 +279,7 @@ padding-left: 40px;">
     <h4>My student journey</h4><p>I am specialized in developing machine learning and deep learning tools across multidisciplinary fields including music, sound, digital signal processing, and urban environment. I started my studies at University of Padua with a bachelor in Information Engineering. I then specialized in Sound and Music Computing at Aalborg University where I dedicated most of my time in machine learning and deep learning projects, including induxtry collaborations and visiting period at the Music Technology Group in Barcelona. I pursued a further MPhil degree at the Institute for Environmental Design and Engineering, The Bartlett, University College London where, as part of the prestigious ERC Advanced Grant in Urban Soundscape Indices (SSID), I developed machine learning methods and psychometric analysis tools to predict urban soundscape under the supervision of Prof. Jian Kang.</p>
 
 <p>I am highly motivated and interested also in studies of ecological preservation of the environment and in the artistic and humanistic fields with the aim of using engineering tools to promote and preserve cultural heritage.</p>
-    
+
 </section>
 
 <section id="contacts" class="content"  style=" order: 6">
@@ -305,8 +307,8 @@ padding: 15px;"><img style="filter: invert(1);" width=400px src="images/email.pn
 
 <footer>
     <div style="position:fixed; bottom:30px; left:0; right:0; height:4px; background-color:rgb(245, 245, 200)"></div>
-        <div style="position:fixed; bottom:0; left:0; right:0; height:30px; color:rgb(235, 235, 180); background-color:rgb(31, 23, 12)">
-    <span style="font-size:small; float: left; padding:5px; ">Matteo Lionello contact: lione***.mat***[at]gmail.com</span></div>
+        <div>
+    <span id="spanfooter">Matteo Lionello contact: lione***.mat***[at]gmail.com</span></div>
 
 
 </footer>
