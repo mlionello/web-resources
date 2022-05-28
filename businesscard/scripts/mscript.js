@@ -1,5 +1,5 @@
 var current_id = "home";
-const idList = ["home", "cv",  "projects", "publications", "sum", "contacts", "news"];
+const idList = ["home", "curriculum",  "projects", "publications", "summary", "contacts", "news"];
 
 let touchstartX = 0
 let touchendX = 0
@@ -93,7 +93,7 @@ window.onscroll = function(ev) {scrollFunction(ev)};
 
 
 function scrollFunction(ev) {
-    
+
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navlist").style.textAlign = "left";
     document.getElementById("navbar").style.paddingTop = "0";
@@ -161,3 +161,18 @@ function enableScroll() {
   window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 
 }
+
+  window.addEventListener("scroll", function() {
+  var elementTarget = document.getElementsByClassName("content");
+  console.error(elementTarget)
+  var current_order = 0;
+  for (i = 0; i < elementTarget.length; i++) {
+        console.error(window.scrollY , elementTarget[i].offsetTop + elementTarget[i].offsetHeight)
+        if (window.scrollY > (elementTarget[i].offsetTop)) {
+        if (elementTarget[i].style.order > current_order) {
+        current_order = elementTarget[i].style.order-1;
+        }}}
+  console.error(current_order)
+  console.error(idList[current_order])
+  document.getElementById("menupointer").innerHTML = idList[current_order]
+});
