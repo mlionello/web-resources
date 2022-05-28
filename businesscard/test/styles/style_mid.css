@@ -41,6 +41,12 @@ margin-left: 100%;
 
 
 @media (max-width: 1050px){
+.content{
+visibility: visible;
+position:relative;
+margin-left: 0;
+}
+
 main{
 font-size:24px}
 
