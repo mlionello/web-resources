@@ -178,7 +178,7 @@ function enableScroll() {
 let touchstartX = 0
 let touchendX = 0
 
-const slider = document.getElementById('slider')
+const slider = document.getElementById('mmain')
 
 function handleGesture() {
   if (touchendX < touchstartX) alert('swiped left!')
