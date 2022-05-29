@@ -23,7 +23,8 @@ background: rgba(128, 128, 128, 0.1);
 #home{
 position:relative;
 margin: auto;
-padding-top: 100px;
+padding-top: 150px;
+padding-bottom: 150px;
 width:auto;
 }
 
