@@ -27,16 +27,3 @@ width:100%;
 }
 
 
-@media (max-width: 1050px){
-body{
-font-size:14px}
-
-    header {
-        visibility:hidden;
-    }    
-    
-
-footer div{
-	height:60px;
-}
-
