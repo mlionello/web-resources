@@ -207,7 +207,7 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             turnpage(idListinit[idListinit.lastIndexOf(current_id)+1])
         } else {
-            turnpage(idList[Math.max(idList.lastIndexOf(current_id)-1,0)])
+            turnpage(idListinit[Math.max(idListinit.lastIndexOf(current_id)-1,0)])
         }
     } else {
         if ( yDiff > 0 ) {
