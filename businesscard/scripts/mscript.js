@@ -1,6 +1,6 @@
 var current_id = "home";
 const idList = ["HOME", "CURRICULUM",  "PROJECTS", "PUBLICATIONS", "SUMMARY", "CONTACTS", "NEWS"];
-const idList = ["home", "cv",  "projects", "publications", "sum", "contacts", "news"];
+const idListinit = ["home", "cv",  "projects", "publications", "sum", "contacts", "news"];
 
 let touchstartX = 0
 let touchendX = 0
@@ -207,7 +207,7 @@ function handleTouchMove(evt) {
         if ( xDiff > 0 ) {
             turnpage(idListinit[idListinit.lastIndexOf(current_id)+1])
         } else {
-            turnpage(idListinit[idListinit.lastIndexOf(current_id)-1])
+            turnpage(idList[Math.max(idList.lastIndexOf(current_id)-1,0)])
         }
     } else {
         if ( yDiff > 0 ) {
