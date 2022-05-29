@@ -59,7 +59,7 @@ right:0;
 
 
 
-@media (max-width: 1080px){
+@media all and (orientation:portrait){
 
     header {
         visibility:hidden;
