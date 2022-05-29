@@ -167,7 +167,7 @@ function enableScroll() {
   var current_order = 0;
   for (i = 0; i < elementTarget.length; i++) {
         console.error(window.scrollY , elementTarget[i].offsetTop + elementTarget[i].offsetHeight)
-        if (window.scrollY > (elementTarget[i].offsetTop)) {
+        if (window.scrollY > (elementTarget[i].offsetTop - 20)) {
         if (elementTarget[i].style.order > current_order) {
         current_order = elementTarget[i].style.order-1;
         }}}

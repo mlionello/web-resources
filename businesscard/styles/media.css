@@ -3,15 +3,22 @@
 .content{
 visibility: visible;
 position:relative;
-margin: auto;
-padding: 20px 5% 20px 5%;
-width:auto;
+margin: 20px 5% 20px 5% ;
+padding: 0;
 }
+
+h1{
+padding-top:5px;}
 
 .firstslide{
 padding: 10% 20px 0% 20px;
 }
 
+.cvrsection{
+margin: 20px 0px 20px 0px;
+padding: 5px 10px 5px 10px;
+background: rgba(128, 128, 128, 0.1);
+}
 
 #home{
 position:relative;
