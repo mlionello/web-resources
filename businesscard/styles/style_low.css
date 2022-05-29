@@ -1,5 +1,5 @@
 #home{
-    padding-top:30vh;
+    padding-top: min(max(45vh, 100px),200px);
 }
 
 #home h1{
