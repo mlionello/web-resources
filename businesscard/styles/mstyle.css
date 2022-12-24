@@ -33,10 +33,6 @@ transition : 0.8s;
     width:50px;
 }
 
-.icons img:over{
-  width:60px;
-}
-
 nav{
 color: rgb(121, 110, 58);
 position:fixed;
@@ -68,8 +64,8 @@ border-bottom: 2px solid rgb(121, 110, 58);
 
 #undercons{
     position: fixed;
-    top:0px; 
-    margin:0; 
+    top:0px;
+    margin:0;
     z-index: 100;
 }
 
