@@ -1,11 +1,13 @@
+html{scroll-behavior:smooth;}
+
 @font-face {
   font-family: navfont1;
-  src: url("/fonts/SourceCodePro-Bold.ttf.woff");
+  src: url("../fonts/SourceCodePro-Bold.ttf.woff");
 }
 
 @font-face {
   font-family: navfont2;
-  src: url("/fonts/JetBrainsMono-Bold.woff2");
+  src: url("../fonts/JetBrainsMono-Bold.woff2");
 }
 
 
@@ -26,4 +28,27 @@ font-size: 16px;
 width:100%;
 }
 
+/* Accessibility + responsive defaults */
+img{
+  max-width: 100%;
+  height: auto;
+}
 
+.skip-link{
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  padding: 10px 14px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 10px;
+  z-index: 1000;
+}
+.skip-link:focus{
+  left: 10px;
+}
+
+a:focus-visible, button:focus-visible{
+  outline: 3px solid #000000;
+  outline-offset: 3px;
+}

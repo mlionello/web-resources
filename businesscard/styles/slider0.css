@@ -95,3 +95,10 @@ opacity: 0;
 visibility: hidden;}
 } 
 
+
+
+@media (prefers-reduced-motion: reduce){
+  .slideinR, .slideinL, .slideoutR, .slideoutL{
+    animation: none !important;
+  }
+}

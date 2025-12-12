@@ -43,7 +43,6 @@ function slideout(slideLeft, slide) {
     }
     }
 
-
 function slidein(slideLeft, slide){
     removeAll(slide);
     if (slideLeft){
@@ -52,16 +51,17 @@ function slidein(slideLeft, slide){
     else {
         slide.classList.add('slideinR');
     }
-    console.log('slide in after adding: ', slide, slide.classList);
+
     }
 
 function removeAll(slide){
-    var cls = slide.classList;
-    slide.classList.remove(cls);
+    // Remove only transition classes (keep base layout classes like 'content' / 'firstslide')
+    slide.classList.remove('slideoutR','slideoutL','slideinL','slideinR','slideinHome');
 }
 
 function turnpage( target_id) {
-    if (document.getElementById(target_id).style.order == document.getElementById(current_id).style.order){
+    if (!target_id || !document.getElementById(target_id)) { return; }
+    if (parseInt(document.getElementById(target_id).style.order,10) === parseInt(document.getElementById(current_id).style.order,10)){
         return;
     }
     
@@ -79,7 +79,7 @@ function turnpage( target_id) {
     var newnav = document.getElementById('nav'+target_id);
     newnav.classList.add('navopen');
     
-    var slideLeft = document.getElementById(target_id).style.order < document.getElementById(current_id).style.order;
+    var slideLeft = parseInt(document.getElementById(target_id).style.order,10) < parseInt(document.getElementById(current_id).style.order,10);
     slideout(slideLeft, document.getElementById(current_id));
     slidein(slideLeft, document.getElementById(target_id));
     current_id = target_id;
@@ -89,9 +89,7 @@ function turnpage( target_id) {
     //$("html, body").animate({ scrollTop: 0 }, "slow");
     }
 
-
 window.onscroll = function(ev) {scrollFunction(ev)};
-
 
 function scrollFunction(ev) {
 
@@ -123,7 +121,6 @@ function scrollFunction(ev) {
          }*/
     
 }
-
 
 function preventDefault(e) {
   e.preventDefault();
@@ -169,10 +166,10 @@ function enableScroll() {
   for (i = 0; i < elementTarget.length; i++) {
         console.error(window.scrollY , elementTarget[i].offsetTop + elementTarget[i].offsetHeight)
         if (window.scrollY > (elementTarget[i].offsetTop - 20)) {
-        if (elementTarget[i].style.order > current_order) {
-        current_order = elementTarget[i].style.order-1;
+        if (parseInt(elementTarget[i].style.order,10) > current_order) {
+        current_order = Math.max(parseInt(elementTarget[i].style.order,10) - 1, 0);
         }}}
-  document.getElementById("menupointer").innerHTML = idList[current_order]
+  document.getElementById("menupointer").innerHTML = idList[Math.min(current_order, idList.length-1)];
 });
 
 document.addEventListener('touchstart', handleTouchStart, false);
@@ -208,7 +205,7 @@ function handleTouchMove(evt) {
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
         if ( xDiff > 0 ) {
-            turnpage(idListinit[idListinit.lastIndexOf(current_id)+1])
+            turnpage(idListinit[Math.min(idListinit.lastIndexOf(current_id)+1, idListinit.length-1)])
         } else {
             turnpage(idListinit[Math.max(idListinit.lastIndexOf(current_id)-1,0)])
         }
