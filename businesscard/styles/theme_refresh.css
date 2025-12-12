@@ -1,0 +1,303 @@
+/*
+  Visual refresh layer
+  - Keeps existing HTML structure & section IDs
+  - Modern typography, spacing, cards, and a cleaner nav
+*/
+
+:root{
+  --bg0:#fbf9f4;
+  --bg1:#f1ede1;
+  --ink:#14110c;
+  --muted:rgba(20,17,12,.72);
+  --border:rgba(20,17,12,.14);
+  --card:rgba(255,255,255,.62);
+  --card-strong:rgba(255,255,255,.86);
+  --shadow:0 16px 40px rgba(0,0,0,.10);
+  --shadow-soft:0 10px 26px rgba(0,0,0,.08);
+  --accent:#2b59c3;
+  --accent2:#0ea5a8;
+  --radius:18px;
+  --radius-lg:26px;
+  --pad:clamp(18px, 3vw, 34px);
+  --max:1100px;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:
+    radial-gradient(1000px 700px at 20% -10%, rgba(43,89,195,.14), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(14,165,168,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg0), var(--bg1));
+  color:var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+}
+
+/* Links */
+a:link, a:visited{ color: var(--accent); }
+a:hover{ color: color-mix(in srgb, var(--accent) 70%, var(--accent2)); }
+
+a:focus-visible, button:focus-visible{
+  outline: 3px solid color-mix(in srgb, var(--accent) 75%, white);
+  outline-offset: 3px;
+}
+
+/* Headings */
+h1,h2,h3{
+  font-family: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: .2px;
+}
+
+h1{ font-size: clamp(28px, 3.3vw, 40px); margin: 18px 0 8px; }
+h2{ font-size: clamp(22px, 2.6vw, 30px); margin: 18px 0 8px; }
+h3{ font-size: 18px; margin: 14px 0 6px; }
+
+p, li{ color: var(--muted); }
+
+/* Layout: keep existing animation logic, but improve spacing */
+section{
+  padding-left: max(18px, 7vw);
+  padding-right: max(18px, 7vw);
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+main{ font-size: 16px; }
+
+/* NAV: desktop */
+#navbar{
+  /* overrides legacy nav padding */
+  padding-top: 12px !important;
+  padding-bottom: 10px !important;
+
+  background: rgba(251,249,244,.70);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+#navlist{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 8px var(--pad);
+}
+
+#navlist li{
+  border-bottom: none !important;
+  padding: 0;
+}
+
+#navlist li a.mainnav{
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: .08em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(20,17,12,.80);
+  transition: transform .15s ease, background .15s ease, color .15s ease;
+}
+
+#navlist li a.mainnav:hover{
+  background: rgba(20,17,12,.06);
+  transform: translateY(-1px);
+}
+
+#navlist li.navopen a.mainnav{
+  background: color-mix(in srgb, var(--accent) 14%, white);
+  color: color-mix(in srgb, var(--accent) 80%, var(--ink));
+}
+
+/* Top-right icons */
+#topmenu{ pointer-events:auto; }
+#topmenu ul{ margin:0; padding:0; }
+
+.icons{
+  margin-top: 10px;
+  margin-right: 18px;
+}
+
+.icons img{
+  width: 42px;
+  opacity: 0.92;
+  border-radius: 12px;
+  box-shadow: none;
+  transition: transform .18s ease, opacity .18s ease, box-shadow .18s ease;
+}
+
+.icons img:hover{
+  width: 42px;
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Optional compact state on scroll (if you apply JS tweak below) */
+body.is-scrolled #navbar{
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+body.is-scrolled .icons{
+  margin-top: 0 !important;
+  margin-right: 10px !important;
+}
+
+/* HOME hero */
+#home{
+  padding-top: min(max(22vh, 130px), 260px);
+  padding-bottom: 110px;
+}
+
+#home h1{
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+#home p{
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--muted);
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+/* Card treatment for content blocks */
+.cvrsection{
+  max-width: var(--max);
+  margin: 18px auto;
+  padding: 18px 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.cvrsection hr{
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(20,17,12,.22), transparent);
+  margin: 10px 0 14px;
+}
+
+/* Lists */
+ul{ padding-left: 1.1rem; }
+li{ margin: 6px 0; }
+
+/* Projects layout polish */
+#projects h3{ display: block; margin-left: 0; }
+#projects p{ padding-left: 0; }
+
+/* Buttons */
+.btn{
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 76%, white), var(--accent));
+  border: 1px solid rgba(0,0,0,.08);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(43,89,195,.25);
+  transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+.btn:hover{
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(43,89,195,.28);
+}
+
+/* CV download button placement */
+#downloadidwrapperdiv{
+  margin-right: 0;
+  position: sticky;
+  top: 96px;
+  float: right;
+  z-index: 2;
+}
+
+/* Contacts icons */
+#contacts span a img{
+  width: 56px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#contacts span a img:hover{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Footer */
+footer div{
+  background: rgba(20,17,12,.92);
+  color: rgba(255,255,255,.82);
+  border-top: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(10px);
+}
+
+/* Mobile: improved hamburger menu look */
+@media all and (orientation:portrait){
+  .topnav{
+    background: rgba(251,249,244,.78);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 26px rgba(0,0,0,.07);
+  }
+
+  .topnav a{ color: var(--ink); }
+  .topnav a.icon{ background: transparent; }
+
+  .topnav a:hover{
+    background: rgba(20,17,12,.06);
+    color: var(--ink);
+  }
+
+  .active{
+    background: transparent;
+    color: var(--ink);
+    font-weight: 700;
+  }
+
+  .topnav #myLinks{
+    border-top: 1px solid var(--border);
+    background: rgba(251,249,244,.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  section{
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 92px;
+  }
+
+  .cvrsection{
+    padding: 16px 16px;
+    border-radius: 18px;
+  }
+
+  #home{ padding-top: 190px; }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; }
+  #navlist li a.mainnav, .icons img, .btn{ transition: none; }
+}

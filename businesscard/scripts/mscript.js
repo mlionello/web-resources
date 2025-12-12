@@ -91,35 +91,9 @@ function turnpage( target_id) {
 
 window.onscroll = function(ev) {scrollFunction(ev)};
 
-function scrollFunction(ev) {
-
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navlist").style.textAlign = "left";
-    document.getElementById("navbar").style.paddingTop = "0";
-    document.getElementById("navbar").style.paddingBottom = "5px";
-    var x = document.getElementsByClassName("icons");
-    for (i = 0; i < x.length; i++) {
-         x[i].style.marginTop = "0";
-         x[i].style.marginRight = "10px";}
-    } else {
-    document.getElementById("navlist").style.textAlign = "center";
-    document.getElementById("navbar").style.paddingTop = "50px";
-    document.getElementById("navbar").style.paddingBottom = "15px";
-    var x = document.getElementsByClassName("icons");
-    for (i = 0; i < x.length; i++) {
-         x[i].style.marginTop = "10px";
-         x[i].style.marginRight = "30px";
-    	 } 
-    }
-    /*if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        turnpage(idList[idList.lastIndexOf(current_id)+1]);
-         window.scrollTo(0, 0);
-				disableScroll();
-				setTimeout(function (){
-  			enableScroll();
-         }, 400);
-         }*/
-    
+function scrollFunction() {
+  const scrolled = (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80);
+  document.body.classList.toggle('is-scrolled', scrolled);
 }
 
 function preventDefault(e) {

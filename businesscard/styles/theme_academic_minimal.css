@@ -1,0 +1,225 @@
+/* Academic / minimal visual layer
+   - Designed as a LAST stylesheet (overrides your existing CSS)
+   - Keeps your structure + section IDs + JS nav logic intact
+*/
+
+:root{
+  --paper:#fbfbf9;
+  --ink:#121212;
+  --muted:rgba(18,18,18,.72);
+  --rule:rgba(18,18,18,.16);
+  --link:#1a4fd3;          /* restrained academic blue */
+  --link-hover:#163fb0;
+  --radius:14px;
+  --max:980px;
+  --pad:clamp(16px, 3vw, 30px);
+}
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* Links */
+a:link, a:visited{ color: var(--link); }
+a:hover{ color: var(--link-hover); }
+a:focus-visible, button:focus-visible{
+  outline: 3px solid rgba(26,79,211,.25);
+  outline-offset: 3px;
+}
+
+/* Headings: academic serif */
+h1,h2,h3{
+  font-family: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  letter-spacing: .1px;
+}
+h1{ font-size: clamp(28px, 3.2vw, 40px); margin: 18px 0 8px; }
+h2{ font-size: clamp(22px, 2.5vw, 30px); margin: 16px 0 8px; }
+h3{ font-size: 18px; margin: 14px 0 6px; }
+
+p, li{ color: var(--muted); }
+
+/* Layout */
+section{
+  padding-left: max(18px, 7vw);
+  padding-right: max(18px, 7vw);
+  padding-top: 110px;
+  padding-bottom: 78px;
+}
+#home{
+  padding-top: min(max(18vh, 120px), 220px);
+  padding-bottom: 90px;
+}
+
+/* Constrain content width neatly (without changing your HTML) */
+section > *{
+  max-width: var(--max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* NAV: plain, academic bar */
+#navbar{
+  background: rgba(251,251,249,.92);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding-top: 10px !important;
+  padding-bottom: 8px !important;
+}
+
+#navlist{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 8px var(--pad);
+}
+
+#navlist li{
+  border-bottom: none !important;
+  padding: 0;
+}
+
+#navlist li a.mainnav{
+  display: inline-block;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: rgba(18,18,18,.78);
+  transition: background .12s ease, color .12s ease;
+}
+
+#navlist li a.mainnav:hover{
+  background: rgba(18,18,18,.06);
+  color: rgba(18,18,18,.92);
+}
+
+#navlist li.navopen a.mainnav{
+  background: rgba(26,79,211,.10);
+  color: rgba(26,79,211,.95);
+}
+
+/* Top-right icons: quieter */
+.icons{
+  margin-top: 8px;
+  margin-right: 16px;
+}
+.icons img{
+  width: 40px;
+  opacity: .82;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: opacity .12s ease;
+}
+.icons img:hover{ opacity: 1; }
+
+/* CV/Sections: minimal “paper block” (no glass/shadows) */
+.cvrsection{
+  max-width: var(--max);
+  margin: 18px auto;
+  padding: 16px 18px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+
+.cvrsection hr{
+  border: none;
+  height: 1px;
+  background: var(--rule);
+  margin: 10px 0 14px;
+}
+
+/* Lists */
+ul{ padding-left: 1.1rem; }
+li{ margin: 6px 0; }
+
+/* Buttons: minimal */
+.btn{
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  padding: 11px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: background .12s ease, border-color .12s ease;
+}
+.btn:hover{
+  background: rgba(18,18,18,.04);
+  border-color: rgba(18,18,18,.28);
+}
+
+/* Keep your CV download placement but make it subtle */
+#downloadidwrapperdiv{
+  margin-right: 0;
+  position: sticky;
+  top: 92px;
+  float: right;
+  z-index: 2;
+}
+
+/* Contacts icons: simple */
+#contacts span a img{
+  width: 54px;
+  padding: 18px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid var(--rule);
+  box-shadow: none;
+  transition: background .12s ease, border-color .12s ease;
+}
+#contacts span a img:hover{
+  background: rgba(18,18,18,.04);
+  border-color: rgba(18,18,18,.28);
+}
+
+/* Footer: restrained */
+footer div{
+  background: #111;
+  color: rgba(255,255,255,.82);
+  border-top: 1px solid rgba(255,255,255,.14);
+}
+
+/* Mobile: keep your hamburger but make it plain */
+@media all and (orientation:portrait){
+  .topnav{
+    background: rgba(251,251,249,.94);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .topnav a{ color: var(--ink); }
+  .topnav a:hover{ background: rgba(18,18,18,.06); }
+
+  .topnav #myLinks{
+    border-top: 1px solid var(--rule);
+    background: rgba(251,251,249,.96);
+  }
+
+  section{
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 92px;
+  }
+
+  #home{ padding-top: 175px; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; }
+}
